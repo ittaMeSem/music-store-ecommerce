@@ -4,6 +4,27 @@
   padding: 0;
 }
 
+html::-webkit-scrollbar {
+  width: 1vw;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #4d4d4db7;
+  border-radius: 15px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #acacac9f;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #4d4d4d;
+}
+
+html::-webkit-scrollbar-track:hover {
+  background-color: #acacac;
+}
+
 body {
   background-color: #f5f5f5;
   font-family: Mulish, sans-serif;
@@ -12,6 +33,7 @@ body {
 .navbar {
   display: flex;
   box-shadow: 0 3px 10px #d1d1d1;
+  background-color: #fff;
 }
 
 .logo img {
@@ -58,21 +80,49 @@ a:active {
 .cart-admin a {
   display: flex;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
+  width: 100px;
+  height: 30px;
+  justify-content: center;
+  transition: background-size 0.2s ease-in-out;
+  background-image: linear-gradient(#000, #000);
+  background-size: 0% 1px;
+  background-position-y: 100%;
+  background-position-x: 0%;
+  background-repeat: no-repeat;
+}
+
+.cart-admin a:hover,
+a:focus,
+a:active {
+  background-size: 100% 1px;
+}
+
+.fa-solid {
+  color: #000;
+  margin: 2px 0 0 5px;
 }
 
 .middle-section {
   display: flex;
 }
 
+.guitar {
+  background-color: #fff;
+  margin: 50px 0 50px 30px;
+  border-radius: 10px;
+  box-shadow: -10px -10px 20px #b4b4b4, 10px 10px 20px #b4b4b4;
+}
+
 .guitar img {
   display: flex;
   height: 1200px;
   z-index: 2;
-  margin: -900px 0 0 700px;
+  margin: -1050px 0 0 700px;
+  padding: 0 30px 30px 0;
 }
 
-.guitar h1 {
+.guitar > h1 {
   display: flex;
   font-size: 200px;
   margin: 200px 0 0 20px;
@@ -85,7 +135,7 @@ a:active {
   margin-left: 70px;
 }
 
-.guitar p {
+.guitar > p {
   width: 680px;
   font-size: 25px;
   margin-left: 20px;
@@ -107,4 +157,30 @@ a:active {
   color: #000;
   background-color: #e6e6e6;
   cursor: pointer;
+}
+
+.advert {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+  width: 600px;
+  height: 200px;
+  margin-top: 50px;
+}
+
+#price {
+  font-size: 70px;
+  font-family: "Playfair Display", serif;
+  margin-left: 20px;
+  width: 220px;
+  border-right: 1px solid #000;
+}
+
+#buy {
+  text-decoration: none;
+  color: #000;
+  height: 50px;
+  font-size: 40px;
+  padding-bottom: 5px;
 }

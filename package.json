@@ -1,0 +1,24 @@
+{
+  "name": "music-store-ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ittaMeSem/music-store-ecommerce.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ittaMeSem/music-store-ecommerce/issues"
+  },
+  "homepage": "https://github.com/ittaMeSem/music-store-ecommerce#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.1.3",
+    "font-awesome": "^4.7.0"
+  }
+}
