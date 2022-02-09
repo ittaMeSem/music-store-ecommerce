@@ -4,18 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
     <title>Guitar Center</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container1">
       <div class="navbar">
         <div class="logo">
           <img src="./img/msllogo.png" alt="music store logo" />
         </div>
+        <div class="menu-buttons">
+          <a href="index.html" class="home-btn">HOME</a>
+          <a href="shop.html" class="shop-btn">SHOP</a>
+          <a href="contact.html" class="contact-btn">CONTACT</a>
+        </div>
+        <div class="cart-admin">
+          <a href="">CART</a>
+          <a href="">ADMIN</a>
+        </div>
+      </div>
+      <div class="middle-section">
+        <div class="guitar">
+          <h1 class="guitar-acoustic">ACOUST <span>C</span></h1>
+          <p>
+            The guitar is equally at home in a classical concerto, a jazz
+            improvisation, or a punk rock anthem. And while the electric guitar
+            suits many genres, it is its older cousin—the acoustic guitar—that
+            offers the greatest versatility. The vibrations carry through the
+            air and do not require electrical amplification (although many
+            acoustic guitars also function as electric guitars).
+          </p>
+          <button id="details">FIND MORE</button>
+          <img src="./img/acoustic-guitar.png" alt="acoustic Guitar" />
+        </div>
       </div>
     </div>
-    <script src="app.js"></script>
+    <script src="./src/app.js"></script>
   </body>
 </html>
