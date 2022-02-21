@@ -13,7 +13,7 @@ window.addEventListener("load", async () => {
             <img src="${product.imgURL}" /> 
             <h3>${product.productName}</h3>
             <h4>${product.productPrice}</h4>
-            <a href="shop.html?product-id=${product.id}" class="btn btn-primary">DETAILS</a>
+            <a href="details.html?product-id=${product.id}">DETAILS</a>
         </div>
     </div>`
     )

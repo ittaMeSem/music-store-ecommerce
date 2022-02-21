@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <title>Guitar Center</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <img src="./img/msllogo.png" alt="music store logo" />
+      </div>
+      <div class="menu-buttons">
+        <a href="index.html" id="home-btn">HOME</a>
+        <a href="shop.html" id="shop-btn">SHOP</a>
+        <a href="contact.html" id="contact-btn">CONTACT</a>
+      </div>
+      <div class="cart-admin">
+        <a href="cart.html" id="cart">CART <i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="admin.html" id="admin"
+          >ADMIN <i class="fa-solid fa-user"></i
+        ></a>
+      </div>
+    </div>
+    <div class="admin-products">
+      <div class="add-product">
+        <form class="new-product-form">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Product name"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="form-price"
+              placeholder="Product price"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="form-image"
+              placeholder="Product image"
+            />
+          </div>
+          <div class="form-group">
+            <input type="hidden" id="productId" name="productId" />
+          </div>
+
+          <div>
+            <button class="update-product btn btn-primary">
+              Update product
+            </button>
+            <button class="add-new-product btn btn-primary">Add product</button>
+          </div>
+        </form>
+      </div>
+      <div class="all-products-admin">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Image</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody class="admin-products-table"></tbody>
+        </table>
+      </div>
+    </div>
+    <script type="module" src="./src/admin.js"></script>
+  </body>
+</html>
