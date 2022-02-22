@@ -4,17 +4,18 @@ window.addEventListener("load", () => {
   let total = 0;
   if (cart) {
     cart.forEach((product) => {
-      total = total + Number(product.price) * product.noOfProducts;
-      console.log(product.price);
+      total = total + Number(product.productPrice) * product.noOfProducts;
+      console.log(product.productPrice);
     });
 
     const productCards = cart
       .map(
         (product) =>
-          `<div class="card w-75">
-      				<div class="card-body">
-        					<h5 class="card-title">${product.name}</h5>
-        					<p class="card-text">${product.price}</p>
+          `<div class="cart">
+      				<div class="cart-content">
+                  <img src=${product.imgURL} />
+        					<h5 class="card-title">${product.productName}</h5>
+        					<p class="card-text">${product.productPrice}$</p>
         					<p class="card-text">Number of products:
 		  						<button data-product-id=${product.id} class="decrement btn btn-dark"> - </button>
 					 				<span class="no-of-products">${product.noOfProducts}</span>
@@ -26,7 +27,7 @@ window.addEventListener("load", () => {
       )
       .join("");
 
-    let totalPriceCard = `<div>TOTAL: ${total}</div>`;
+    let totalPriceCard = `<div>TOTAL: ${total}$</div>`;
     document.querySelector(".cart-container").innerHTML = productCards;
     document.querySelector(".total-price-container").innerHTML = totalPriceCard;
   }
@@ -65,11 +66,11 @@ function handleCartActions(event) {
 
     let total = 0;
     cart.forEach((product) => {
-      total = total + Number(product.price) * product.noOfProducts;
+      total = total + Number(product.productPrice) * product.noOfProducts;
       console.log(typeof product.noOfProducts);
-      console.log(product.price);
+      console.log(product.productPrice);
     });
-    let totalPriceCard = `<div>TOTAL: ${total}</div>`;
+    let totalPriceCard = `<div>TOTAL: ${total}$</div>`;
     document.querySelector(".total-price-container").innerHTML = totalPriceCard;
   }
 }
