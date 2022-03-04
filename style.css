@@ -183,6 +183,7 @@ a:active {
   width: 380px;
   height: 650px;
   margin-bottom: 50px;
+  padding-top: 10px;
   background-color: #fff;
   border-radius: 15px;
   transition: transform 0.2s;
@@ -252,6 +253,7 @@ a:active {
   background: #000;
   padding: 0;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 #details > span {
@@ -271,21 +273,17 @@ a:active {
   transform: translate3d(-8px, -8px, 0);
 }
 
-.card {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 50px 352px;
+.details-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 100px 150px;
   background-color: #fff;
+  box-shadow: 5px 5px 16px #8f8f8f, -5px -5px 16px #8f8f8f;
   border-radius: 15px;
-  box-shadow: 5px 5px 16px #d3d3d3, -5px -5px 16px #ffffff;
 }
 
-.card-image > img {
-  display: flex;
-  border-radius: 15px 0 0 15px;
-  padding: 0 180px 0 20px;
-  align-self: center;
+.card-image{
+  padding: 50px 0 50px 160px;
 }
 
 .card-body {
@@ -294,7 +292,50 @@ a:active {
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 20px;
-  background-color: #acacac28;
+  gap: 50px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.7rem;
+  color: #fff;
+  background: linear-gradient(to right, #000000, #434343);
   border-radius: 0 15px 15px 0;
+}
+
+.cart-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+}
+
+.footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #fff;
+  box-shadow: 0 -3px 10px #a5a5a5;
+  margin-top: 100px;
+}
+
+.left-footer{
+display: flex;
+align-items: center;
+gap: 20px;
+padding: 20px;
+}
+
+.left-footer img{
+  width: 7rem;
+  padding-right: 20px;
+  border-right: 1px solid #000;
+}
+
+.right-footer-links{
+  text-align: center;
+  align-self: center;
+
+}
+
+.right-footer-links a{
+  text-decoration: none;
+  color: #000;
+  font-size: 1.5rem;
 }

@@ -1,3 +1,5 @@
+const cartProductsTable = document.querySelector(".cart-products");
+
 window.addEventListener("load", () => {
   const cart = JSON.parse(localStorage.getItem("cart"));
 
@@ -8,27 +10,26 @@ window.addEventListener("load", () => {
       console.log(product.productPrice);
     });
 
-    const productCards = cart
+    const cartTable = cart
       .map(
         (product) =>
-          `<div class="cart">
-      				<div class="cart-content">
-                  <img src=${product.imgURL} />
-        					<h5 class="card-title">${product.productName}</h5>
-        					<p class="card-text">${product.productPrice}$</p>
-        					<p class="card-text">Number of products:
-		  						<button data-product-id=${product.id} class="decrement btn btn-dark"> - </button>
-					 				<span class="no-of-products">${product.noOfProducts}</span>
-								<button data-product-id=${product.id} class="increment btn btn-dark"> + </button>
-							</p>
-      				</div>
-						<button data-product-id=${product.id} class="delete btn btn-dark"> DELETE </button>
-    				</div>`
+          `<tr>
+               <td><img src=${product.imgURL} style="height: 100px;"/></td>
+               <td>${product.productName} </td>
+               <td>${product.productPrice}$</td>
+               <td><button data-product-id=${product.id} class="decrement btn btn-dark"> - </button>
+			 				<span class="no-of-products">${product.noOfProducts}</span>
+							<button data-product-id=${product.id} class="increment btn btn-dark"> + </button>
+               </button></td>
+               <td><button data-product-id=${product.id} class="delete btn btn-dark"> DELETE </button></td>
+            </tr>`
       )
       .join("");
 
-    let totalPriceCard = `<div>TOTAL: ${total}$</div>`;
-    document.querySelector(".cart-container").innerHTML = productCards;
+    cartTable.innerHTML = cartProductsTable;
+
+    let totalPriceCard = `<div class="total">TOTAL: ${total}$</div>`;
+    document.querySelector(".cart-products").innerHTML = cartTable;
     document.querySelector(".total-price-container").innerHTML = totalPriceCard;
   }
 });
@@ -43,7 +44,7 @@ function handleCartActions(event) {
     (productFromCart) =>
       productFromCart.id == targetButton.getAttribute("data-product-id")
   );
-  let quantityParagraph = targetButton.parentNode;
+  let quantityParagraph = targetButton.parentNode.parentNode;
 
   if (targetButton.classList.contains("increment")) {
     productInCart.noOfProducts++;
@@ -56,7 +57,7 @@ function handleCartActions(event) {
       cart,
       cart.filter((product) => product.id != productInCart.id)
     );
-    targetButton.parentNode.remove();
+    targetButton.parentNode.parentNode.remove();
   }
 
   localStorage.setItem("cart", JSON.stringify(cart));

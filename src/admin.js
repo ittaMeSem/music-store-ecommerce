@@ -17,7 +17,7 @@ async function getAllProducts() {
                <th scope="row">${product.id}</th>
                <td><img src=${product.imgURL} style="height: 100px;"/></td>
                <td>${product.productName} </td>
-               <td>${product.productPrice}</td>
+               <td>${product.productPrice}$</td>
                <td><button class="btn btn-danger delete fa-solid fa-x" data-product-id=${product.id}>
                </button></td>
                <td><button class="btn btn-success edit fa-solid fa-pen-to-square" data-product-id=${product.id}>

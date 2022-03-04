@@ -9,15 +9,17 @@ window.addEventListener("load", async () => {
   const product = await result.json();
 
   const productCard = `
-		<div class="card">
+		<div class="details-card">
 			<div class="card-image">
           <img src="${product.imgURL}"/>
       </div>
       <div class="card-body">
-	  			<h2 class="card-title">${product.productName}</h2>
-	  			<h3 class="card-price">${product.productPrice}$</h3>
-	  			<button id="add-to-cart"><span data-product-id=${product.id}>Add to cart</span></button>
-			</div>
+	  			  <h2 class="card-title">${product.productName}</h2>
+	  			  <h3 class="card-price">${product.productPrice}$</h3>
+          <div class= "card-body-btn"
+	  			  <button id="add-to-cart"><span data-product-id=${product.id}>Add to cart</span></button>
+          </div>
+      </div>
  		</div>`;
 
   document.querySelector(".product-details").innerHTML = productCard;
