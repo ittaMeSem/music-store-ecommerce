@@ -1,13 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <script src="https://unpkg.com/phosphor-icons"></script>
     <title>Guitar Center</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="./img/msllogo.png" alt="music store logo" />
+        </div>
+        <div class="menu-buttons">
+          <a href="index.html" id="home-btn">HOME</a>
+          <a href="shop.html" id="shop-btn">SHOP</a>
+          <a href="contact.html" id="contact-btn">CONTACT</a>
+        </div>
+        <div class="cart-admin">
+          <a href="cart.html" id="cart"
+            >CART <i class="fa-solid fa-cart-shopping"></i
+          ></a>
+          <a href="admin.html" id="admin"
+            >ADMIN <i class="fa-solid fa-user"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="contact-us">
+        <div class="contact-info">
+          <!-- Address -->
+          <h3><i class="ph-map-pin"></i>Address</h3>
+          <p>
+            Thomann GmbH <br />
+            Treppendorf <br />
+            Hans-Thomann-Straße 1 <br />
+            D-96138 Burgebrach, Germany
+          </p>
+          <!-- Phone -->
+          <h3><i class="ph-phone"></i>Let's talk</h3>
+          <a href="tel:+49 3333360099">+49 3333360099</a>
+          <!-- Customer Service -->
+          <h3><i class="ph-envelope-simple"></i>Customer Service</h3>
+          <a href="mailto:uk@thomann.de">uk@thomann.de</a>
+        </div>
+        <!-- Contact form -->
+        <div class="contact-form">
+          <h2>Send us a message!</h2>
+          <form action="contact.html" id="form">
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your first name"
+            />
+
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name"
+            />
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Germany">Germany</option>
+              <option value="United States">USA</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Write something.."
+              style="height: 200px"
+            ></textarea>
+
+            <input type="submit" value="Submit" id="submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="left-footer">
+        <img src="./img/msllogo.png" alt="main logo" />
+        <h5>©Copyright 2022 Guitar Center ltd. All rights reserved!</h5>
+      </div>
+      <div class="right-footer-links">
+        <a target="_blank" href="https://www.twitter.com"
+          ><i class="ph-twitter-logo"></i
+        ></a>
+        <a target="_blank" href="https://www.youtube.com"
+          ><i class="ph-youtube-logo"></i
+        ></a>
+        <a target="_blank" href="https://www.facebook.com"
+          ><i class="ph-facebook-logo"></i
+        ></a>
+        <a href="index.html"><i class="ph-globe-hemisphere-west"></i></a>
+        <h5>Follow and support us on all of our social links.</h5>
+      </div>
+    </footer>
+  </body>
 </html>
