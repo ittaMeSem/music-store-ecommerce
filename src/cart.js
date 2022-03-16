@@ -28,7 +28,7 @@ window.addEventListener("load", () => {
 
     cartTable.innerHTML = cartProductsTable;
 
-    let totalPriceCard = `<div class="total">TOTAL: ${total}$</div>`;
+    let totalPriceCard = `<div class="total"><h1>TOTAL: ${total}$</h1></div>`;
     document.querySelector(".cart-products").innerHTML = cartTable;
     document.querySelector(".total-price-container").innerHTML = totalPriceCard;
   }
@@ -71,7 +71,7 @@ function handleCartActions(event) {
       console.log(typeof product.noOfProducts);
       console.log(product.productPrice);
     });
-    let totalPriceCard = `<div>TOTAL: ${total}$</div>`;
+    let totalPriceCard = `<div><h1>TOTAL: ${total}$</h1></div>`;
     document.querySelector(".total-price-container").innerHTML = totalPriceCard;
   }
 }

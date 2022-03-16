@@ -26,86 +26,84 @@
     <title>Guitar Center</title>
   </head>
   <body>
-    <div class="container">
-      <!-- Homepage navbar -->
-      <div class="navbar">
-        <div class="logo">
-          <img src="./img/msllogo.png" alt="music store logo" />
-        </div>
-        <div class="menu-buttons">
-          <a href="index.html" id="home-btn">HOME</a>
-          <a href="shop.html" id="shop-btn">SHOP</a>
-          <a href="contact.html" id="contact-btn">CONTACT</a>
-        </div>
-        <div class="cart-admin">
-          <a href="cart.html" id="cart"
-            >CART <i class="fa-solid fa-cart-shopping"></i
-          ></a>
-          <a href="admin.html" id="admin">ADMIN <i class="fa-solid fa-user"></i></a>
-        </div>
+    <div class="navbar">
+      <div class="logo">
+        <img src="./img/msllogo.png" alt="music store logo" />
       </div>
-      <!-- Homepage middle section acoustic guitar-->
-      <div class="middle-section1">
-        <div class="guitar">
-          <h1 class="guitar-acoustic">ACOUST <span>C</span></h1>
-          <p>
-            The guitar is equally at home in a classical concerto, a jazz
-            improvisation, or a punk rock anthem. And while the electric guitar
-            suits many genres, it is its older cousin—the acoustic guitar—that
-            offers the greatest versatility. The vibrations carry through the
-            air and do not require electrical amplification (although many
-            acoustic guitars also function as electric guitars).
-          </p>
-          <div class="advert">
-            <h1 id="price">
-              from <br />
-              $1,499
-            </h1>
-            <a href="./shop.html" id="buy" role="button">BUY NOW!</a>
-          </div>
-          <img src="./img/acoustic-guitar.png" alt="acoustic Guitar" />
-        </div>
+      <div class="menu-buttons">
+        <a href="index.html" id="home-btn">HOME</a>
+        <a href="shop.html" id="shop-btn">SHOP</a>
+        <a href="contact.html" id="contact-btn">CONTACT</a>
       </div>
-      <!-- Homepage second middle section electric guitar -->
-      <div class="middle-section2">
-        <div class="guitar">
-          <h1 class="guitar-acoustic">ELECTR <span>C</span></h1>
-          <p>
-            An electric guitar is structured from a wooden body with parts such
-            as a pickup installed and strung with steel strings. If played
-            without amplification the volume of the sound is low, so a device is
-            used to electrically amplify the sound. The bodies of these guitars
-            are treated to look like metal or plastic and are often quite
-            colorful, so some people may not realize that the instruments are
-            actually made from wood. However, just like any other guitar,
-            electric guitars are generally made from wood.
-          </p>
-
-          <div class="advert">
-            <h1 id="price">
-              from <br />
-              $2,499
-            </h1>
-            <a href="./shop.html" id="buy">BUY NOW!</a>
-          </div>
-          <img src="./img/electric-guitar.png" alt="acoustic Guitar" />
-        </div>
+      <div class="cart-admin">
+        <a href="cart.html" id="cart"
+          >CART <i class="fa-solid fa-cart-shopping"></i
+        ></a>
+        <a href="admin.html" id="admin"
+          >ADMIN <i class="fa-solid fa-user"></i
+        ></a>
       </div>
     </div>
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="left-footer">
-        <img src="./img/msllogo.png" alt="main logo">
-        <h5>©Copyright 2022 Guitar Center ltd. All rights reserved!</h5>
+    <section aria-label="Newest Photos">
+      <div class="carousel" data-carousel>
+        <button class="carousel-button prev" data-carousel-button="prev">
+          <i class="ph-arrow-left"></i>
+        </button>
+        <button class="carousel-button next" data-carousel-button="next">
+          <i class="ph-arrow-right"></i>
+        </button>
+        <ul data-slides>
+          <li class="slide" data-active>
+            <div class="guitar">
+              <h1 class="guitar-acoustic">ACOUST <span>C</span></h1>
+              <p>
+                The guitar is equally at home in a classical concerto, a jazz
+                improvisation, or a punk rock anthem. And while the electric
+                guitar suits many genres, it is its older cousin—the acoustic
+                guitar—that offers the greatest versatility. The vibrations
+                carry through the air and do not require electrical
+                amplification (although many acoustic guitars also function as
+                electric guitars).
+              </p>
+              <div class="advert">
+                <h1 id="price">
+                  from <br />
+                  $1,499
+                </h1>
+                <a href="./shop.html" id="buy" role="button">BUY NOW!</a>
+              </div>
+              <img src="./img/acoustic-guitar.png" alt="acoustic Guitar" />
+            </div>
+          </li>
+
+          <li class="slide">
+              <div class="guitar">
+                <h1 class="guitar-acoustic">ELECTR <span>C</span></h1>
+                <p>
+                  An electric guitar is structured from a wooden body with parts
+                  such as a pickup installed and strung with steel strings. If
+                  played without amplification the volume of the sound is low,
+                  so a device is used to electrically amplify the sound. The
+                  bodies of these guitars are treated to look like metal or
+                  plastic and are often quite colorful, so some people may not
+                  realize that the instruments are actually made from wood.
+                  However, just like any other guitar, electric guitars are
+                  generally made from wood.
+                </p>
+
+                <div class="advert">
+                  <h1 id="price">
+                    from <br />
+                    $2,499
+                  </h1>
+                  <a href="./shop.html" id="buy">BUY NOW!</a>
+                </div>
+                <img src="./img/electric-guitar.png" alt="acoustic Guitar" />
+              </div>
+          </li>
+        </ul>
       </div>
-      <div class="right-footer-links">
-        <a target="_blank" href="https://www.twitter.com"><i class="ph-twitter-logo"></i></a>
-        <a target="_blank" href="https://www.youtube.com"><i class="ph-youtube-logo"></i></a>
-        <a target="_blank" href="https://www.facebook.com"><i class="ph-facebook-logo"></i></a>
-        <a href="index.html"><i class="ph-globe-hemisphere-west"></i></a>
-        <h5>Follow and support us on all of our social links.</h5>
-      </div>
-    </footer>
+    </section>
     <script type="module" src="./src/app.js"></script>
   </body>
 </html>
