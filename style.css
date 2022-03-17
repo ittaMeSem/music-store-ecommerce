@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-}
-
 html::-webkit-scrollbar {
   width: 0.9vw;
 }
@@ -32,24 +28,30 @@ html::-webkit-scrollbar-track:hover {
 body {
   background: linear-gradient(to right, #ece9e6, #ffffff);
   font-family: Mulish, sans-serif;
+  margin: 0;
 }
 
 .navbar {
   display: flex;
   box-shadow: 0 3px 10px #d1d1d1;
   background-color: #fff;
-  width: auto;
+  width: 100%;
+  height: 120px;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  overflow: hidden;
 }
 
 .logo > img {
-  width: 170px;
+  width: 130px;
   margin: 20px;
 }
 
 .menu-buttons {
   display: flex;
   height: 50px;
-  margin: 50px 200px;
+  margin: 40px 200px;
   align-items: center;
   gap: 50px;
 }
@@ -57,7 +59,7 @@ body {
 .menu-buttons a {
   text-decoration: none;
   height: 40px;
-  font-size: 30px;
+  font-size: 25px;
   color: #000;
   transition: background-size 0.2s ease-in-out;
   background-image: linear-gradient(#000, #000);
@@ -77,10 +79,10 @@ a:active {
 .cart-admin {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   align-self: center;
   z-index: 1;
-  margin-left: 200px;
+  margin-left: 300px;
 }
 
 .cart-admin a {
@@ -230,7 +232,7 @@ a:active {
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 .product-card {
@@ -268,6 +270,10 @@ a:active {
   flex-direction: column;
   margin: 50px 0;
   gap: 20px;
+}
+
+.admin-products{
+  margin-top: 200px;
 }
 
 .all-products-admin {
@@ -331,7 +337,7 @@ a:active {
 .details-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 100px 150px;
+  margin: 200px 150px;
   background-color: #fff;
   box-shadow: 5px 5px 16px #8f8f8f, -5px -5px 16px #8f8f8f;
   border-radius: 15px;
@@ -355,11 +361,16 @@ a:active {
   border-radius: 0 15px 15px 0;
 }
 
+.cart-container{
+  margin-top: 200px;
+}
+
 .cart-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 150px;
+  
 }
 
 .total {
@@ -372,6 +383,7 @@ a:active {
   background-color: #fff;
   box-shadow: 0 -3px 10px #a5a5a5;
   margin-top: 100px;
+  bottom: 0;
 }
 
 .left-footer {
@@ -406,7 +418,7 @@ a:active {
   flex-direction: row;
   justify-content: center;
   gap: 400px;
-  margin: 50px 100px;
+  margin: 200px 100px;
   padding: 20px;
   background-color: #fff;
   padding: 50px;
