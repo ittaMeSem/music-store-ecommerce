@@ -1,2 +1,5 @@
-node_modules
 products.json
+node_modules/@popperjs
+node_modules/animate.css
+node_modules/font-awesome
+node_modules/.package-lock.json
